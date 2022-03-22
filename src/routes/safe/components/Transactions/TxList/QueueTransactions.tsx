@@ -8,7 +8,7 @@ import { QueueTxList } from './QueueTxList'
 import { Centered, NoTransactions } from './styled'
 import { TxsInfiniteScroll } from './TxsInfiniteScroll'
 import { TxLocationContext } from './TxLocationProvider'
-import { BatchExecute } from 'src/routes/safe/components/Transactions/TxList/BatchExecute'
+import { MemoizedBatchExecute } from 'src/routes/safe/components/Transactions/TxList/BatchExecute'
 
 export const QueueTransactions = (): ReactElement => {
   const { count, isLoading, hasMore, next, transactions } = usePagedQueuedTransactions()
@@ -34,7 +34,7 @@ export const QueueTransactions = (): ReactElement => {
 
   return (
     <>
-      <BatchExecute />
+      <MemoizedBatchExecute />
       <TxsInfiniteScroll next={next} hasMore={hasMore} isLoading={isLoading}>
         {/* Next list */}
         <TxLocationContext.Provider value={{ txLocation: 'queued.next' }}>
