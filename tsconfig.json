@@ -18,8 +18,7 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "noFallthroughCasesInSwitch": true,
-    "downlevelIteration": true,
-    "ignoreBuildErrors": true
+    "downlevelIteration": true
   },
   "paths": {
     "src/*": ["./*"]
