@@ -87,8 +87,8 @@ jobs:
         run: yarn build
         env:
           REACT_APP_FORTMATIC_KEY: ${{ secrets.REACT_APP_FORTMATIC_KEY }}
-          REACT_APP_INFURA_TOKEN: ${{ secrets.REACT_APP_INFURA_TOKEN }}
-          REACT_APP_SAFE_APPS_RPC_INFURA_TOKEN: ${{ secrets.REACT_APP_SAFE_APPS_RPC_INFURA_TOKEN }}
+          REACT_APP_ALCHEMY_TOKEN: ${{ secrets.REACT_APP_ALCHEMY_TOKEN }}
+          REACT_APP_SAFE_APPS_RPC_ALCHEMY_TOKEN: ${{ secrets.REACT_APP_SAFE_APPS_RPC_ALCHEMY_TOKEN }}
           REACT_APP_PORTIS_ID: ${{ secrets.REACT_APP_PORTIS_ID }}
           REACT_APP_INTERCOM_ID: ${{ secrets.REACT_APP_INTERCOM_ID }}
           REACT_APP_BEAMER_ID: ${{ secrets.REACT_APP_BEAMER_ID }}

@@ -30,7 +30,7 @@ const styles = () => ({
   },
   summary: {
     alignItems: 'center',
-    backgroundColor: 'white',
+    backgroundColor: '#290001',
     flexWrap: 'nowrap',
     height: headerHeight,
     position: 'fixed',

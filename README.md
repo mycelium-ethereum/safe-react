@@ -49,7 +49,7 @@ cp .env.example .env
 To execute transactions, you'll need to create an [Infura](https://infura.io) project and set the project ID in the `.env` you've just created:
 
 ```
-REACT_APP_INFURA_TOKEN=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+REACT_APP_ALCHEMY_TOKEN=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
 Once done, you'll need to restart the app if it's already running.

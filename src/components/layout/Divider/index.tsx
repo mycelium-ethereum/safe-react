@@ -1,9 +1,7 @@
 import { ReactElement } from 'react'
 
-import { border } from 'src/theme/variables'
-
 const style = {
-  borderRight: `solid 2px ${border}`,
+  borderRight: `solid 2px #eea62b`,
   height: '100%',
 }
 

@@ -4,7 +4,7 @@ import { WalletModule, Helpers } from 'bnc-onboard/dist/src/interfaces'
 
 import { getRpcServiceUrl } from 'src/config'
 import { getChains } from 'src/config/cache/chains'
-import { INFURA_TOKEN } from 'src/utils/constants'
+// import { ALCHEMY_TOKEN } from 'src/utils/constants'
 import { ChainId } from 'src/config/chain'
 
 // TODO: When desktop pairing is merged, import these into there
@@ -45,7 +45,7 @@ const patchedWalletConnect = (chainId: ChainId): WalletModule => {
     svg: walletConnectIcon,
     wallet: async ({ resetWalletState }: Helpers) => {
       const provider = new WalletConnectProvider({
-        infuraId: INFURA_TOKEN,
+        // infuraId: ALCHEMY_TOKEN,
         rpc: getRpcMap(),
         chainId: parseInt(chainId, 10),
         bridge: WC_BRIDGE,
