@@ -94,9 +94,10 @@ const Layout = ({ classes, providerDetails, providerInfo }) => {
 
   return (
     <Row className={classes.summary}>
+      <style>{` #safe-logo { max-width: unset }`}</style>
       <Col className={classes.logo} middle="xs" start="xs">
         <Link to={WELCOME_ROUTE}>
-          <Img alt="Gnosis Safe" height={36} src={SafeLogo} testId="heading-gnosis-logo" id="safe-logo" />
+          <Img alt="Gnosis Safe" height={42} src={SafeLogo} testId="heading-gnosis-logo" id="safe-logo" />
         </Link>
       </Col>
 
