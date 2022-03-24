@@ -15,6 +15,7 @@ import { getChainById } from 'src/config'
 const useStyles = makeStyles({
   network: {
     fontFamily: 'Averta, sans-serif',
+    color: 'white',
   },
   networkLabel: {
     '& div': {
@@ -68,9 +69,16 @@ const ProviderInfo = ({ connected, provider, userAddress }: ProviderInfoProps): 
   const currentNetwork = useSelector(networkSelector)
   const ensName = useSelector(userEnsSelector)
   const chain = getChainById(currentNetwork)
-  const addressColor = connected ? 'text' : 'warning'
+  const addressColor = connected ? 'white' : 'warning'
   return (
     <>
+      <style>
+        {`
+      .wallet-address * {
+        color: #fff;
+      }
+    `}
+      </style>
       {!connected && <KeyRing circleSize={35} dotRight={11} dotSize={16} dotTop={24} keySize={14} mode="warning" />}
       <WalletIcon provider={provider.toUpperCase()} />
       <Col className={classes.account} layout="column" start="sm">
@@ -88,18 +96,20 @@ const ProviderInfo = ({ connected, provider, userAddress }: ProviderInfoProps): 
         <div>
           {connected ? (
             ensName ? (
-              <Text strong size="sm">
+              <Text strong size="sm" color={addressColor}>
                 {ensName}
               </Text>
             ) : (
-              <PrefixedEthHashInfo
-                hash={userAddress}
-                shortenHash={4}
-                showAvatar
-                avatarSize="xs"
-                textColor={addressColor}
-                textSize="sm"
-              />
+              <span className="wallet-address">
+                <PrefixedEthHashInfo
+                  hash={userAddress}
+                  shortenHash={4}
+                  showAvatar
+                  avatarSize="xs"
+                  textColor={addressColor}
+                  textSize="sm"
+                />
+              </span>
             )
           ) : (
             <Text size="md" color={addressColor}>
